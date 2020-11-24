@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* I love three things in this world,</span><br />
+				<span class="space"/><span class="comments">* the sun the moon and you,
+				</span><br />
+				<span class="space"/><span class="comments">*the sun for morning,the moon for night,
+				</span><br />
+				<span class="space"/><span class="comments">*and you forever!
+				</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword"></span> name(<span class="string">"Jiangquan"</span>);<br />
+				Girl u = <span class="keyword"></span> name(<span class="string">"Liufan"</span>);<br />
+				<span class="comments">// Mar 1, 2019, I met u for the first time. </span><br />
+				Two thin books,One cup of tea;<br />
+				<span class="comments">// Luckily, you got the book you wanted and became my friend eversince.</span><br />
+				------------;<br />
+				<span class="comments">// Since then, I miss u at times.</span><br />
+				Generally spearking;<br />
+				<span class="comments">// I'll never get a chance to see you again.</span><br />
+				Fortunately;<br />
+				<span class="comments">// I've got a chance to get my cloth for u.</span><br />
+				<span class="comments">// And walk 84 kilometers with u,as u cp.</span><br />
+				<span class="keyword">If</span> meet u = <span class="keyword">fate</span>;<br />
+				<span class="keyword">while</span> (i meet u) {<br />
+				<span class="placeholder"/>i do not wanna miss this opportunity;<br />
+				<span class="placeholder"/>So i made this page to express my love;<br />
+				<span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
+				<span class="placeholder"/><span class="comments">// and you could think it over.</span><br />
+				}<br />
+				代码是我复制的，土味英语是有道翻译的;<br />
+				对你的心意是原创且真挚的！<br />
+				<span class="placeholder"/>//Lufan i love u,could u please be my girlfriend?<br />
+				<span class="comments">// Waiting for your answer ^0^</span><br />
+				<span class="keyword">Love u,JQ
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Liufan, 距我们相遇已经
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Jiangquan</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2019, 2, 1);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>

@@ -3348,11 +3348,12 @@ input, select, textarea {
 		}
 
 		#main strong, #main b {
-			color: #636363;
+	color: #9933FF;
+	font-family: "Courier New", Courier, monospace;
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-			color: #636363;
+	color: #000;
 		}
 
 		#main blockquote {
@@ -3783,3 +3784,18 @@ input, select, textarea {
 			}
 
 		}
+#content {
+	font-family: "Courier New", Courier, monospace;
+}
+.is-preload #wrapper #main #content p #content {
+	color: #00FFFF;
+}
+.is-preload #wrapper #main #content p #content {
+	color: #000000;
+}
+.is-preload #wrapper #main #content p {
+	color: #000;
+}
+.is-preload #wrapper #main #content p {
+	color: #000;
+}
